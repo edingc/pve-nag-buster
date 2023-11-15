@@ -25,7 +25,7 @@ packages installed with PVE by default.
 
 ### Installation
 ```sh
-wget https://raw.githubusercontent.com/foundObjects/pve-nag-buster/master/install.sh
+wget https://raw.githubusercontent.com/edingc/pve-nag-buster/master/install.sh
 
 # Always read scripts downloaded from the internet before running them with sudo
 sudo bash install.sh
@@ -36,7 +36,7 @@ chmod +x install.sh && sudo ./install.sh
 
 With Git:
 ```sh
-git clone https://github.com/foundObjects/pve-nag-buster.git
+git clone https://github.com/edingc/pve-nag-buster.git
 
 # Always read scripts downloaded from the internet before running them with sudo
 cd pve-nag-buster && sudo ./install.sh
@@ -48,26 +48,8 @@ sudo ./install.sh --uninstall
 # remove /etc/apt/sources.list.d/pve-no-subscription.list if desired
 ```
 
-### Notes:
-
-#### Why is there base64 in my peanut-butter?
-
-For convenience the install script also contains a base64 encoded copy of the
-hook script, this makes installation possible without access to github or a
-full clone of the project directory.
-
-To inspect the base64 encoded script run `./install.sh --emit`; this dumps the
-encoded copy to stdout and quits. To install using the stored copy just run
-`sudo ./install.sh --offline`, no internet required.
-
 ### Thanks to:
 
 - John McLaren for his [blog post](https://www.reddit.com/user/seaqueue) documenting the web gui patch.
 - [Marlin Sööse](https://github.com/msoose) for the update for PVE 6.3+
-
-### Contact:
-
-[Open an issue](https://github.com/foundObjects/pve-nag-buster/issues) on GitHub
-
-Please get in touch if you find a way to improve anything, otherwise enjoy!
 
