@@ -31,12 +31,6 @@ _main() {
   { [ "$#" -eq "0" ] && set -- ""; } > /dev/null 2>&1
 
   case "$1" in
-    "--emit")
-      # call the emit_script() function to stdout and exit, use this to verify
-      # that the base64 encoded script below isn't doing anything malicious
-      # does not require root
-      emit_script
-      ;;
     "--uninstall")
       # uninstall, requires root
       assert_root
